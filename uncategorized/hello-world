@@ -84,12 +84,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="邹慧东的博客">
-<meta property="og:url" content="http://eidonjoe.com/index.html">
+<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://eidonjoe.com/uncategorized/hello-world">
 <meta property="og:site_name" content="邹慧东的博客">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
+<meta property="og:updated_time" content="2016-09-21T11:22:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="邹慧东的博客">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
 
 
 
@@ -110,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://eidonjoe.com/"/>
+  <link rel="canonical" href="http://eidonjoe.com/uncategorized/hello-world"/>
 
-  <title> 邹慧东的博客 </title>
+  <title> Hello World | 邹慧东的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -133,9 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,9 +247,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -264,148 +269,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/技术文章/Mongodb-简明便利版" itemprop="url">
-                  Mongodb 简明便利版
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-22T15:36:33+08:00" content="2016-09-22">
-              2016-09-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技术文章/" itemprop="url" rel="index">
-                    <span itemprop="name">技术文章</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Mongodb简明便利版"><a href="#Mongodb简明便利版" class="headerlink" title="Mongodb简明便利版"></a>Mongodb简明便利版</h1><p>mongodb作为NoSQL的代表,在处理用户个人信息,地理位置信息,用户生成数据以及用户操作日志方面拥有着得天独厚的优势.<br>MongoDB 将数据存储为一个文档,数据结构由键值(key=&gt;value)对组成,文档类似于JSON 对象,字段值可以包含其他文档,数组及文档数组.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">username</span>: <span class="string">'eidonjoe'</span>,</div><div class="line">  <span class="attr">age</span>: <span class="number">24</span>,</div><div class="line">  <span class="attr">sex</span>: <span class="string">'男'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><br>更多其他优势请移步=&gt;<a href="https://www.mongodb.com/" target="_blank" rel="external">mongodb官网</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>只针对mac平台<br>推荐使用<code>brew</code>安装,省时省力,如果没安装<code>brew</code>的请移步<a href="http://brew.sh/" target="_blank" rel="external">brew官网</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mongodb</div></pre></td></tr></table></figure>
-<p>安装成功后你可以使用<code>mongod</code>命令来启动mongodb<br>这时候控制台会输出<code>waiting for connections on port 27017</code>,表明mongodb在27017(mongodb默认启动端口)端口启动成功<br>然后新开一个<code>shell</code>窗口,输入 mongodb://localhost:27017来连接你本地的mongodb数据库<br>ps:如果你觉得<code>shell</code>的方式不能使你清晰明了的观察到整个数据库的结构,这时候你可能需要一个可视化工具<a href="&#39;https://robomongo.org&#39;">Robomongo</a>,你可以在这上面创建mongodb连接,创建数据库,操作集合与数据,相比<code>shell</code>方式来讲,图形化管理更能节省时间成本,但是不建议管理线上数据库,正是因为操作的便利性所以会给数据管理带来一定的风险</p>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>首先选择or创建数据库 <code>use database</code></p>
-<p><code>database</code>=&gt;所要创建的数据库名称</p>
-<ul>
-<li>查 find || findOne <code>db.collection.find(criteria)</code>,</li>
-</ul>
-<p><code>collection</code>=&gt;对应的所要查询的集合名字,<code>criteria</code>=&gt;查询条件</p>
-<p>查询条件也以一个对象的方式传入,即{key: value}的形式,</p>
-<ul>
-<li>AND操作 criteria1,criteria2</li>
-<li>OR操作 $or:[criteria1,criteria2]</li>
-<li>条件操作(&gt;) 大于 - $gt,(&lt;) 小于 - $lt,(&gt;=) 大于等于 - $gte,(&lt;= ) 小于等于 - $lte</li>
-</ul>
-<p>usage:<br>{“查询字段名”: {条件操作符: 值}}<br>eg:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> criteria = &#123;<span class="string">"age"</span>: &#123;<span class="attr">$gt</span>: <span class="number">24</span>&#125;&#125; </div><div class="line">db.collection.find(criteria) <span class="comment">// 查询年龄大于24的文档</span></div></pre></td></tr></table></figure></p>
-<ul>
-<li>改 update <code>db.collection.update(criteria, doc[, upsert, muti])</code></li>
-</ul>
-<p><code>collection</code>=&gt;对应的所要更新的集合名字,<code>criteria</code>(必需)=&gt;查询条件,<code>doc</code>(必需)=&gt;所要更新的文档,<br><code>upsert</code>(可选<boolen>)=&gt;若文档不存在是否创建新文档, <code>muti</code>(可选<boolen>)=&gt;mongodb 默认是false,只更新找到的第一条记录</boolen></boolen></p>
-<p>usage:<br>{“查询字段名”: “值”},{$set: {“更新字段”: “值”}}</p>
-<p>eg:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> criteria = &#123;<span class="string">"age"</span>: <span class="number">24</span>&#125; </div><div class="line"><span class="keyword">var</span> doc = &#123;<span class="attr">$set</span>: &#123;<span class="string">"username"</span>: <span class="string">"eidon"</span>&#125;&#125;</div><div class="line">db.collection.update(criteria, doc) <span class="comment">// 更新年龄为24的文档</span></div></pre></td></tr></table></figure><br>更新数组:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> criteria = &#123;<span class="string">"age"</span>: <span class="number">24</span>&#125; </div><div class="line"><span class="keyword">var</span> doc = &#123;<span class="attr">$push</span>: &#123;<span class="string">"phone"</span>: <span class="string">"12345678900"</span>&#125;&#125;</div><div class="line">db.collection.update(criteria, doc) <span class="comment">// 向phone字段中增加一个12345678900的值,若不存在phone字段将创建该字段且该字段为数组</span></div></pre></td></tr></table></figure>
-<p>联合操作</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">db.collection.find().count() <span class="comment">// 计算文档数目 </span></div><div class="line">db.collection.find().sort(&#123;<span class="string">"filed"</span>: <span class="number">1</span>&#125;) <span class="comment">// 是文档根据指定字段进行排序=&gt; 1 正序 -1 倒序 </span></div><div class="line">db.collection.find().skip(num) <span class="comment">// 跳过指定条数的文档 </span></div><div class="line">db.collection.find().limit(num) <span class="comment">// 查询限制的文档数量 </span></div><div class="line"><span class="comment">// TODO</span></div><div class="line">db.collection.aggregate() <span class="comment">// mongodb 统计 </span></div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/uncategorized/hello-world" itemprop="url">
-                  Hello World
-                </a>
+                Hello World
               
             
           </h1>
@@ -445,9 +309,7 @@
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
@@ -457,16 +319,20 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -474,19 +340,32 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/技术文章/Mongodb-简明便利版" rel="prev" title="Mongodb 简明便利版">
+                Mongodb 简明便利版 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -494,6 +373,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -513,8 +396,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -593,6 +485,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -696,6 +599,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
